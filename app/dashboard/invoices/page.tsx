@@ -6,6 +6,10 @@ import { lusitana } from "@/app/ui/fonts";
 import { InvoicesTableSkeleton } from "@/app/ui/skeletons";
 import { Suspense } from "react";
 import { fetchInvoicesPages } from "@/app/lib/data";
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Invoices",
+};
 //<Table>是一个 Server Component，它获取自己的数据，因此您可以将 searchParams prop 从页面传递给组件。
 export default async function Page(props: {
   searchParams?: Promise<{
